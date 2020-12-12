@@ -10,3 +10,7 @@ jobs:
 
       - name: "hello-action"
         uses: ./.github/actions/hello-world
+        with:
+          first-greeting: eeny
+          second-greeting: miny
+          third-greeting: moe

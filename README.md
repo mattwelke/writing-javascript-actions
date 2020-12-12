@@ -1,5 +1,6 @@
 # Welcome to your course 🎉
 
+
 ### Getting started
 
 In this repository we will be diving into the world of writing GitHub Actions! I will guide you through the process of writing a custom JavaScript based GitHub Actions.

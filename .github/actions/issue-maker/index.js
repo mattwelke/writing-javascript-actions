@@ -1,15 +1,15 @@
-const core = require("@actions/core");
-const github = require("@actions/github");
+import { getInput } from '@actions/core';
+import { getOctokit } from '@actions/github';
 
 async function run() {
     try {
-        const issueTitle = core.getInput("issue-title");
-        const jokeBody = core.getInput("joke");
-        const token = core.getInput("repo-token");
+        const issueTitle = getInput("issue-title");
+        const jokeBody = getInput("joke");
+        const token = getInput("repo-token");
 
-        const octokit = github.getOctokit(token);
+        const octokit = getOctokit(token);
 
-        const newIssue = await octokit.issues.create({
+        await octokit.issues.create({
             repo: github.context.repo.repo,
             owner: github.context.repo.owner,
             title: issueTitle,
